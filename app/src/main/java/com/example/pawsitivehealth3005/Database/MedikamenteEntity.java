@@ -1,5 +1,6 @@
 package com.example.pawsitivehealth3005.Database;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 @Entity(tableName = "medikamenteTabelle")
 public class MedikamenteEntity {
@@ -17,8 +18,11 @@ public class MedikamenteEntity {
 private int id;
 private String mediNameString;
     private int mgAngabe;
+    @Ignore
     private boolean isChecked;
+    @Ignore
     private boolean isChecked2;
+    @Ignore
     private boolean isChecked3;
 
 public MedikamenteEntity(){
@@ -56,12 +60,20 @@ public MedikamenteEntity(){
         isChecked = checked;
     }
 
+    public boolean getIsChecked() {
+        return isChecked;
+    }
+
     public boolean isChecked2() {
         return isChecked2;
     }
 
     public void setIsChecked2(boolean checked2) {
         isChecked2 = checked2;
+    }
+
+    public boolean getIsChecked2() {
+        return isChecked2;
     }
 
     public boolean isChecked3() {
@@ -72,5 +84,8 @@ public MedikamenteEntity(){
         isChecked3 = checked3;
     }
 
+    public boolean getIsChecked3() {
+        return isChecked3;
+    }
 
 }

@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase;
 
 import com.example.pawsitivehealth3005.Datum_heute;
 
-@Database(entities = {MedikamenteEntity.class},version=2)
+@Database(entities = {MedikamenteEntity.class},version=5,exportSchema = false)
 public abstract class MedikamenteDatabase extends RoomDatabase{
     private static MedikamenteDatabase medikamenteDatabase;
     public abstract MedikamenteDAO medikamenteDAO();

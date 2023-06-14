@@ -205,12 +205,15 @@ public class Datum_heute extends AppCompatActivity {
             //SPAZIERGÄNGE
             String spaziergangName = getIntent().getStringExtra("spaziergangName");
             String stepCount = getIntent().getStringExtra("stepCount");
+            Boolean happy=getIntent().getBooleanExtra("happy",false);
+            Boolean medium=getIntent().getBooleanExtra("medium",false);
+            Boolean sad=getIntent().getBooleanExtra("sad",false);
 
             // Aus Datum_heute
             stammdatenEntity.setNotizenAusscheidung(notizenAusscheidung);
             stammdatenEntity.setNotizenEssen(notizenEssen);
             stammdatenEntity.setDatumAnzeigeString(DatumAnzeigeString);
-            //stammdatenEntity.setImageBytesE(imageBytesEssen);
+            stammdatenEntity.setImageBytesE(imageBytesEssen);
             stammdatenEntity.setImageBytesA(imageBytesAusscheidung);
 
             //Aus Medis
@@ -228,6 +231,9 @@ public class Datum_heute extends AppCompatActivity {
             //Aus Sapziergang
             spaziergängeEntity.setSpaziergangName(spaziergangName);
             spaziergängeEntity.setStepCount(stepCount);
+            spaziergängeEntity.setHappy(happy);
+            spaziergängeEntity.setMedium(medium);
+            spaziergängeEntity.setSad(sad);
 
             // Speichern der Daten in der Datenbank über die DatabaseOperations-Klasse
             databaseOperations.insertMedikament(medikamenteEntity, Datum_heute.this);

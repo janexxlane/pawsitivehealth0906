@@ -13,6 +13,35 @@ public class SpaziergängeEntity {
     private String spaziergangName;
     private String stepCount;
 
+    private boolean happy;
+
+    public boolean isHappy() {
+        return happy;
+    }
+
+    public void setHappy(boolean happy) {
+        this.happy = happy;
+    }
+
+    public boolean isMedium() {
+        return medium;
+    }
+
+    public void setMedium(boolean medium) {
+        this.medium = medium;
+    }
+
+    public boolean isSad() {
+        return sad;
+    }
+
+    public void setSad(boolean sad) {
+        this.sad = sad;
+    }
+
+    private boolean medium;
+    private boolean sad;
+
     public void setSpaziergangName(String spaziergangName) {
         this.spaziergangName = spaziergangName;
     }

@@ -16,19 +16,22 @@ public class neuerArzttermin extends AppCompatActivity {
         setContentView(R.layout.activity_neuer_arzttermin);
 
 
-        //Speichern von Name
-        EditText arztName = findViewById(R.id.nameArzt);
-        String arztNameString = arztName.getText().toString();
-        //Speichern von telNummer
-        EditText arztNummer = findViewById(R.id.phoneNr);
-        String arztNummerString = arztNummer.getText().toString();
-        //Speichern von Diagnose
-        EditText diagnose = findViewById(R.id.diagnose);
-        String diagnoseString = diagnose.getText().toString();
+
 
 
         Button saveBtn = findViewById(R.id.saveTerminButton);
         saveBtn.setOnClickListener(view -> {
+
+            //Speichern von Name
+            EditText arztName = findViewById(R.id.nameArzt);
+            String arztNameString = arztName.getText().toString();
+            //Speichern von telNummer
+            EditText arztNummer = findViewById(R.id.phoneNr);
+            String arztNummerString = arztNummer.getText().toString();
+            //Speichern von Diagnose
+            EditText diagnose = findViewById(R.id.diagnose);
+            String diagnoseString = diagnose.getText().toString();
+
 
             //Schickt in datum_heute
             Intent myintent = new Intent(this, Datum_heute.class);
@@ -46,6 +49,12 @@ public class neuerArzttermin extends AppCompatActivity {
             startActivity(myintent);
         });
 
+        Button test = findViewById(R.id.button);
+        test.setOnClickListener(view -> {
+
+            Intent myintent = new Intent(this, Log.class);
+            startActivity(myintent);
+        });
     } }
 
 

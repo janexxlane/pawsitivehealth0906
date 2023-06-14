@@ -7,6 +7,11 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.Sensors" />
+
+
     <application
         android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
@@ -21,6 +26,9 @@
             android:name=".neuerArzttermin"
             android:exported="false" />
         <activity
+            android:name=".neuerSpaziergang"
+            android:exported="false" />
+        <activity
             android:name=".neuesMedikament"
             android:exported="false" />
         <activity
@@ -28,6 +36,9 @@
             android:exported="false" />
         <activity
             android:name=".Homescreen"
+            android:exported="false" />
+        <activity
+            android:name=".Log"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

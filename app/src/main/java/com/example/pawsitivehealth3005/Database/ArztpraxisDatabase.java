@@ -5,7 +5,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities ={ArztpraxisEntity.class}, version=2)
+@Database(entities ={ArztpraxisEntity.class}, version=5, exportSchema = false)
 public abstract class ArztpraxisDatabase extends RoomDatabase {
 
     private static ArztpraxisDatabase arztpraxisDatabase;
